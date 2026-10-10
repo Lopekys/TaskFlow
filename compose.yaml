@@ -13,7 +13,7 @@ services:
     # Hot reload только для dev
     command: >
       gunicorn --bind 0.0.0.0:8000 --workers 1 --reload
-      --access-logfile - "app:create_app()"
+      --no-control-socket --access-logfile - "app:create_app()"
     ports:
       - "8000:8000"
     volumes:

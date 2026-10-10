@@ -7,12 +7,22 @@ The first web app my koresh built
 - Docker Compose v5.5.1
 - uv 0.12.24 (установка: https://astral.sh/uv/install.ps1)
 
-## Комманда для запуска проекта локально
+## Команды для запуска проекта
+1. Копируем .env файл на основе .env.example(поменять данные при необходимости)
 ```
-docker compose up --build
+cp .env.example .env
 ```
+2. Запуск docker через compose 
+```
+docker compose up --build -d
+```
+
 
 ## Helthcheck работоспособности проекта
 ```
 curl http://localhost:8000/api/v1/health
+```
+## Выключить compose
+```
+docker compose down 
 ```
